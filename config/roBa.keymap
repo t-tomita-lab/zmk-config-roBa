@@ -53,6 +53,12 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+
+        leftClick {
+            bindings = <&mkp LCLK>;
+            key-positions = <18 19>;
+            timeout-ms = <0>;
+        };
     };
 
     macros {
