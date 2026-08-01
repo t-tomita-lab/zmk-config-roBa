@@ -113,6 +113,8 @@
 &mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp EQUAL                    &kp ASTERISK    &kp PERCENT      &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BACKSLASH
 &trans                   &trans        &trans        &trans        &trans        &trans                       &trans          &trans                                                                     &kp PIPE
             >;
+
+            sensor-bindings = <&inc_dec_kp K_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         ARROW {
