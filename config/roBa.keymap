@@ -155,13 +155,14 @@
             >;
         };
 
-        JP_Symbol {
+JP_Symbol {
             bindings = <
-&kp MINUS                &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                                                   &kp EXCLAMATION   &kp DOUBLE_QUOTES  &kp LS(NUMBER_8)       &kp LS(NUMBER_9)      &kp LS(NUMBER_6)
-&kp SLASH                &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)   &kp AT_SIGN            &kp LEFT_BRACKET      &kp EQUAL
-&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp LS(MINUS)                &kp COLON       &kp LS(NUMBER_5)  &kp AMPERSAND      &kp LS(DOUBLE_QUOTES)  &kp LS(LEFT_BRACKET)  &kp INT_YEN
-&trans                   &trans        &trans        &trans        &trans        &trans                       &trans          &trans                                                                            &kp LS(INT_YEN)
+&kp LS(MINUS)            &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp LS(SEMICOLON)        &trans                      &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_8)     &kp LS(NUMBER_9)     &kp LS(NUMBER_6)
+&kp LS(SLASH)            &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LS(COLON)            &trans                      &kp LS(MINUS)     &kp LS(NUMBER_3)  &kp LS(SQT)          &kp LBKT             &kp RBKT
+&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LS(PERIOD)           &kp LS(SEMICOLON)           &kp LS(NUMBER_7)  &kp LS(NUMBER_5)  &kp EQUAL            &kp LS(LBKT)         &kp LS(RBKT)         &kp LS(INT1)
+&trans                   &trans        &trans        &trans        &trans                   &trans                      &trans            &trans                                                                                                   &kp INT3
             >;
         };
+
     };
 };
