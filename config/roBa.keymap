@@ -60,7 +60,7 @@
         to_us: to_us {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 7>;     // US_Symbols
+            bindings = <&to 6>;     // US_Symbols
         };
 
         to_jp: to_jp {
