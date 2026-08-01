@@ -60,7 +60,7 @@
         to_us: to_us {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 6>;     // US_Symbols
+            bindings = <&to 7>;     // US_Symbols
         };
 
         to_jp: to_jp {
@@ -90,7 +90,7 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R        &kp T                                     &kp Y        &kp U  &trans     &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F        &kp G   &kp LS(LG(S))      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &trans
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B   &trans             &trans         &kp N        &kp M  &kp COMMA  &kp DOT  &lt 4 SLASH
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B   &trans             &trans         &kp N        &kp M  &kp COMMA  &kp DOT  &lt 6 SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 SPACE  &trans  &trans             &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
@@ -128,15 +128,6 @@
             >;
         };
 
-        BT_profile {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &to_us        &to_jp        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
-            >;
-        };
-
         SCROLL {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
@@ -146,9 +137,18 @@
             >;
         };
 
+        BT_profile {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &to_us        &to_jp        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+            >;
+        };
+
         US_Symbols {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                           &trans  &trans  &lt 5 I  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                           &trans  &trans  &lt 4 I  &trans  &trans
 &trans  &trans  &trans  &trans  &trans       &trans               &trans         &trans  &trans  &trans   &trans  &kp APOSTROPHE
 &trans  &trans  &trans  &trans  &trans       &kp COLON            &kp SEMICOLON  &trans  &trans  &trans   &trans  &trans
 &trans  &trans  &trans  &trans  &lt 8 SPACE  &lt 2 LA(GRAVE)      &trans         &trans                           &trans
@@ -157,7 +157,7 @@
 
         JP_Symbols {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &lt 5 I  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &lt 4 I  &trans  &trans
 &trans  &trans  &trans  &trans  &trans       &trans               &trans    &trans  &trans  &trans   &trans  &kp LS(N7)
 &trans  &trans  &trans  &trans  &trans       &kp SQT              &kp SEMI  &trans  &trans  &trans   &trans  &trans
 &trans  &trans  &trans  &trans  &lt 9 SPACE  &lt 2 LA(GRAVE)      &trans    &trans                           &trans
