@@ -82,8 +82,8 @@
             bindings = <
 &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &lt 4 I &kp O &kp P
 &kp A &kp S &kp D &kp F &kp G &kp LS(LG(S)) &kp MINUS &kp H &kp J &kp K &kp L &trans
-&mt LEFT_SHIFT Z &kp X &kp C &kp V &kp B &trans &trans &kp N &kp M &kp COMMA &kp DOT &lt_to_layer_0 5 SLASH
-&kp LCTRL &kp LEFT_WIN &kp LEFT_ALT &lt_to_layer_0 3 SPACE &trans &trans &kp BACKSPACE &lt 1 ENTER &kp DEL
+&mt LEFT_SHIFT Z &kp X &kp C &kp V &kp B &trans &trans &kp N &kp M &kp COMMA &kp DOT &lt 5 SLASH
+&kp LCTRL &kp LEFT_WIN &kp LEFT_ALT &lt 3 SPACE &trans &trans &kp BACKSPACE &lt 1 ENTER &kp DEL
             >;
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PG_UP>;
         };
@@ -116,7 +116,7 @@
 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans &trans &trans &mkp MB1 &mkp MB3 &mkp MB2 &trans
 &trans &trans &trans &trans &trans &trans &trans &trans &trans &mkp LCLK &mkp MCLK &mkp RCLK
-&trans &trans &trans &to 0 &to 0 &to 0 &to 0 &to 0 &trans
+&trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
         };
 
@@ -166,9 +166,9 @@
         US_Symbols {
             bindings = <
 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &lt_to_layer_0 3 APOSTROPHE
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp APOSTROPHE
 &trans &trans &trans &trans &trans &kp COLON &kp SEMICOLON &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &lt 6 SPACE &lt_to_layer_0 2 LA(GRAVE) &trans &trans &trans
+&trans &trans &trans &trans &lt 6 SPACE &kp LA(GRAVE) &trans &trans &trans
             >;
         };
 
@@ -176,9 +176,9 @@
         JP_Symbols {
             bindings = <
 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &lt_to_layer_0 3 LS(N7)
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp LS(N7)
 &trans &trans &trans &trans &trans &kp SQT &kp SEMI &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &lt 7 SPACE &lt_to_layer_0 2 LA(LS(LBKT)) &trans &trans &trans
+&trans &trans &trans &trans &lt 7 SPACE &kp LA(LS(LBKT)) &trans &trans &trans
             >;
         };
     };
