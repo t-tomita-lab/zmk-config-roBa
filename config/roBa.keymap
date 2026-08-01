@@ -90,12 +90,6 @@
 &kp A             &kp S         &kp D         &kp F                   &kp G                   &kp LS(LG(S))                   &kp MINUS      &kp H        &kp J  &kp K      &kp L    &lt_to_layer_0 4 APOSTROPHE
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B                   &kp COLON                       &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &lt_to_layer_0 6 SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 4 SPACE  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 3 LA(GRAVE)      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
-
-// &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &lt 5 I &kp O &kp P
-// &kp A &kp S &kp D &kp F &kp G &kp LS(LG(S)) &kp MINUS &kp H &kp J &kp K &kp L &lt_to_layer_0 4 LS(N7)
-// &mt LEFT_SHIFT Z &kp X &kp C &kp V &kp B &kp SQT &kp SEMI &kp N &kp M &kp COMMA &kp DOT &lt_to_layer_0 6 SLASH
-// &kp LCTRL &kp LEFT_WIN &kp LEFT_ALT &lt_to_layer_0 4 SPACE &lt_to_layer_0 7 SPACE &lt_to_layer_0 3 LA(LS(LBKT)) &kp BACKSPACE &lt 1 ENTER &kp DEL
-
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PG_UP>;
@@ -161,12 +155,21 @@
             >;
         };
 
+        JP_Default_Layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
         JP_Symbol {
             bindings = <
-&kp MINUS          &kp N7             &kp N8             &kp N9             &kp LS(SEMI)       &kp LS(N1)         &kp LBKT           &kp LS(N8)         &kp LS(N9)         &kp LS(N6)
-&kp SLASH          &kp N4             &kp N5             &kp N6             &kp LS(SQT)        &kp LC(LA(KP_N0))  &kp LS(INT1)       &kp LS(N3)         &kp LS(N4)         &kp RBKT           &kp NUHS           &kp LS(EQUAL)
-&mt LSHFT N0       &kp N1             &kp N2             &kp N3             &kp DOT            &kp LS(MINUS)      &kp LS(SQT)        &kp LS(N5)         &kp EQUAL          &kp LS(RBKT)       &kp LS(NUHS)       &kp INT1
-&trans             &trans             &trans             &trans             &trans             &trans             &trans             &trans             &kp LS(INT3)
+&kp MINUS     &kp N7  &kp N8  &kp N9  &kp LS(SEMI)                                       &kp LS(N1)  &kp LBKT    &kp LS(N8)    &kp LS(N9)    &kp LS(N6)
+&kp SLASH     &kp N4  &kp N5  &kp N6  &kp LS(SQT)   &kp LC(LA(KP_N0))      &kp LS(INT1)  &kp LS(N3)  &kp LS(N4)  &kp RBKT      &kp NUHS      &kp LS(EQUAL)
+&mt LSHFT N0  &kp N1  &kp N2  &kp N3  &kp DOT       &kp LS(MINUS)          &kp LS(SQT)   &kp LS(N5)  &kp EQUAL   &kp LS(RBKT)  &kp LS(NUHS)  &kp INT1
+&trans        &trans  &trans  &trans  &trans        &trans                 &trans        &trans                                              &kp LS(INT3)
             >;
         };
     };
