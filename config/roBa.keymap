@@ -157,10 +157,10 @@
 
         JP_Symbol {
             bindings = <
-&kp MINUS                &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS                                                   &kp EXCLAMATION  &kp AT_SIGN         &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS      &kp AMPERSAND
-&kp SLASH                &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp LEFT_BRACKET   &kp RIGHT_BRACKET         &kp CARET                  &kp GRAVE                  &kp TILDE
-&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp CARET                    &kp ASTERISK    &kp PERCENT        &kp EQUAL                 &kp LS(LEFT_BRACKET)       &kp LS(RIGHT_BRACKET)      &kp BACKSLASH
-&trans                   &trans        &trans        &trans        &trans        &trans                       &trans          &trans                                                             &kp LS(BACKSLASH)
+&kp MINUS                &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                                                   &kp EXCLAMATION      &kp DOUBLE_QUOTES         &kp LS(NUMBER_8)          &kp LS(NUMBER_9)          &kp LS(NUMBER_6)
+&kp SLASH                &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE      &kp LS(NUMBER_3)          &kp LS(NUMBER_4)          &kp AT_SIGN              &kp LEFT_BRACKET         &kp EQUAL
+&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp LS(MINUS)                &kp COLON           &kp LS(NUMBER_5)          &kp AMPERSAND             &kp LS(DOUBLE_QUOTES)    &kp LS(LEFT_BRACKET)     &kp INT_YEN
+&trans                   &trans        &trans        &trans        &trans        &trans                       &trans              &trans                                                     &kp LS(INT_YEN)
             >;
         };
 
