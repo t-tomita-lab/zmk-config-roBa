@@ -16,26 +16,32 @@
 / {
     combos {
         compatible = "zmk,combos";
+
         tab {
             bindings = <&kp TAB>;
             key-positions = <11 12>;
         };
+
         shift_tab {
             bindings = <&kp LS(TAB)>;
             key-positions = <12 13>;
         };
+
         muhennkann {
             bindings = <&to_layer_0 INT_MUHENKAN>;
             key-positions = <11 10>;
         };
+
         double_quotation {
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <20 21>;
         };
+
         eq {
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+
         leftClick {
             bindings = <&mkp LCLK>;
             key-positions = <18 19>;
@@ -54,13 +60,13 @@
         to_us: to_us {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 6>;     // US_Symbols
+            bindings = <&to 5>;     // US_Symbols
         };
 
         to_jp: to_jp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 7>;     // JP_Symbols
+            bindings = <&to 6>;     // JP_Symbols
         };
     };
 
@@ -69,6 +75,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
@@ -78,108 +85,105 @@
         compatible = "zmk,keymap";
 
         // 0: 共通ベース
+
         Common {
             bindings = <
-&kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &trans &kp O &kp P
-&kp A &kp S &kp D &kp F &kp G &kp LS(LG(S)) &kp MINUS &kp H &kp J &kp K &kp L &trans
-&mt LEFT_SHIFT Z &kp X &kp C &kp V &kp B &trans &trans &kp N &kp M &kp COMMA &kp DOT &lt 5 SLASH
-&kp LCTRL &kp LEFT_WIN &kp LEFT_ALT &lt 3 SPACE &trans &trans &kp BACKSPACE &lt 1 ENTER &kp DEL
+&kp Q             &kp W         &kp E         &kp R        &kp T                                     &kp Y        &kp U  &trans     &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F        &kp G   &kp LS(LG(S))      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &trans
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B   &trans             &trans         &kp N        &kp M  &kp COMMA  &kp DOT  &lt 4 SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 SPACE  &trans  &trans             &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
+
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PG_UP>;
         };
 
-        // 1: FUNCTION
         FUNCTION {
             bindings = <
-&trans &trans &trans &trans &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5
-&trans &trans &trans &trans &trans &trans &trans &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp F11
-&trans &trans &trans &trans &trans &trans &trans &trans &kp F12
+&trans  &trans  &trans  &trans  &trans                      &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &kp F11
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &kp F12
             >;
+
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
 
-        // 2: ARROW
         ARROW {
             bindings = <
-&kp ESCAPE &kp LC(LS(TAB)) &kp UP_ARROW &kp LC(TAB) &trans &trans &trans &trans &trans &trans
-&kp HOME &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &kp END &trans &trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-&kp LEFT_SHIFT &kp LG(LS(LEFT_ARROW)) &trans &kp LG(LS(RIGHT_ARROW)) &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans    &trans    &trans  &trans     &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans    &trans    &trans  &trans     &trans
+&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                 &trans
             >;
+
             sensor-bindings = <&inc_dec_kp LC(PAGE_DOWN) LC(PAGE_UP)>;
         };
 
-        // 3: MOUSE
         MOUSE {
             bindings = <
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &mkp MB1 &mkp MB3 &mkp MB2 &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &mkp LCLK &mkp MCLK &mkp RCLK
-&trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3   &mkp MB2   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &mkp LCLK  &mkp MCLK  &mkp RCLK
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                  &trans
             >;
         };
 
-        // 4: SCROLL
-        SCROLL {
-            bindings = <
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans
-            >;
-        };
-
-        // 5: BT + 環境切り替え
         BT_profile {
             bindings = <
-&trans &trans &trans &trans &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-&trans &trans &trans &trans &trans &trans &trans &to_us &to_jp &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &bootloader &trans &trans &trans &trans &bt BT_CLR
-&trans &trans &trans &trans &trans &trans &trans &trans &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &to_us        &to_jp        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
         };
 
-        // 6: 英語環境
         US_Symbols {
             bindings = <
-&trans &trans &trans &trans &trans &trans &trans &lt 4 I &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp APOSTROPHE
-&trans &trans &trans &trans &trans &kp COLON &kp SEMICOLON &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &lt 8 SPACE &lt 2 LA(GRAVE) &trans &trans &trans
+&trans  &trans  &trans  &trans  &trans                                           &trans  &trans  &lt 9 I  &trans  &trans
+&trans  &trans  &trans  &trans  &trans       &trans               &trans         &trans  &trans  &trans   &trans  &kp APOSTROPHE
+&trans  &trans  &trans  &trans  &trans       &kp COLON            &kp SEMICOLON  &trans  &trans  &trans   &trans  &trans
+&trans  &trans  &trans  &trans  &lt 7 SPACE  &lt 2 LA(GRAVE)      &trans         &trans                           &trans
             >;
         };
 
-        // 7: 日本語環境
         JP_Symbols {
             bindings = <
-&trans &trans &trans &trans &trans &trans &trans &lt 4 I &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp LS(N7)
-&trans &trans &trans &trans &trans &kp SQT &kp SEMI &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &lt 9 SPACE &lt 2 LA(GRAVE) &trans &trans &trans
+&trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &lt 9 I  &trans  &trans
+&trans  &trans  &trans  &trans  &trans       &trans               &trans    &trans  &trans  &trans   &trans  &kp LS(N7)
+&trans  &trans  &trans  &trans  &trans       &kp SQT              &kp SEMI  &trans  &trans  &trans   &trans  &trans
+&trans  &trans  &trans  &trans  &lt 8 SPACE  &lt 2 LA(GRAVE)      &trans    &trans                           &trans
             >;
         };
 
-        // 8: 英語用NUM
         US_NUM {
             bindings = <
-&kp MINUS &kp NUMBER_7 &kp NUMBER_8 &kp N9 &kp PLUS &kp EXCLAMATION &kp AT_SIGN &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp AMPERSAND
-&kp SLASH &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp ASTERISK &kp LC(LA(KP_NUMBER_0)) &kp UNDERSCORE &kp HASH &kp DOLLAR &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp TILDE
-&mt LEFT_SHIFT NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp PERIOD &kp EQUAL &kp ASTERISK &kp PERCENT &kp CARET &kp LEFT_BRACE &kp RIGHT_BRACE &kp BACKSLASH
-&trans &trans &trans &trans &trans &trans &trans &trans &kp PIPE
+&kp MINUS                &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                                                   &kp EXCLAMATION  &kp AT_SIGN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND
+&kp SLASH                &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp HASH         &kp DOLLAR   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE
+&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp EQUAL                    &kp ASTERISK    &kp PERCENT      &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BACKSLASH
+&trans                   &trans        &trans        &trans        &trans        &trans                       &trans          &trans                                                                     &kp PIPE
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-        // 9: 日本語用NUM
         JP_NUM {
             bindings = <
-&kp MINUS &kp N7 &kp N8 &kp N9 &kp LS(SEMI) &kp LS(N1) &kp LBKT &kp LS(N8) &kp LS(N9) &kp LS(N6)
-&kp SLASH &kp N4 &kp N5 &kp N6 &kp LS(SQT) &kp LC(LA(KP_N0)) &kp LS(INT1) &kp LS(N3) &kp LS(N4) &kp RBKT &kp NUHS &kp LS(EQUAL)
-&mt LSHFT N0 &kp N1 &kp N2 &kp N3 &kp DOT &kp LS(MINUS) &kp LS(SQT) &kp LS(N5) &kp EQUAL &kp LS(RBKT) &kp LS(NUHS) &kp INT1
-&trans &trans &trans &trans &trans &trans &trans &trans &kp LS(INT3)
+&kp MINUS     &kp N7  &kp N8  &kp N9  &kp LS(SEMI)                                       &kp LS(N1)  &kp LBKT    &kp LS(N8)    &kp LS(N9)    &kp LS(N6)
+&kp SLASH     &kp N4  &kp N5  &kp N6  &kp LS(SQT)   &kp LC(LA(KP_N0))      &kp LS(INT1)  &kp LS(N3)  &kp LS(N4)  &kp RBKT      &kp NUHS      &kp LS(EQUAL)
+&mt LSHFT N0  &kp N1  &kp N2  &kp N3  &kp DOT       &kp LS(MINUS)          &kp LS(SQT)   &kp LS(N5)  &kp EQUAL   &kp LS(RBKT)  &kp LS(NUHS)  &kp INT1
+&trans        &trans  &trans  &trans  &trans        &trans                 &trans        &trans                                              &kp LS(INT3)
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
+
+        SCROLL {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
         };
     };
 };
