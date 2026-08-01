@@ -89,7 +89,7 @@
 &kp Q             &kp W         &kp E         &kp R                   &kp T                                                                  &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                   &kp G                   &kp LS(LG(S))                   &kp MINUS      &kp H        &kp J  &kp K      &kp L    &lt_to_layer_0 4 APOSTROPHE
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B                   &kp COLON                       &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &lt_to_layer_0 6 SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 4 SPACE  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 3 LA(GRAVE)      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 4 SPACE  &lt_to_layer_0 7 SPACE  &lt_to_layer_0 3 LA(GRAVE)      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PG_UP>;
@@ -157,12 +157,11 @@
 
         JP_Symbol {
             bindings = <
-&kp MINUS                &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                                                   &kp EXCLAMATION      &kp DOUBLE_QUOTES         &kp LS(NUMBER_8)          &kp LS(NUMBER_9)          &kp LS(NUMBER_6)
-&kp SLASH                &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE      &kp LS(NUMBER_3)          &kp LS(NUMBER_4)          &kp AT_SIGN              &kp LEFT_BRACKET         &kp EQUAL
-&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp LS(MINUS)                &kp COLON           &kp LS(NUMBER_5)          &kp AMPERSAND             &kp LS(DOUBLE_QUOTES)    &kp LS(LEFT_BRACKET)     &kp INT_YEN
-&trans                   &trans        &trans        &trans        &trans        &trans                       &trans              &trans                                                     &kp LS(INT_YEN)
+&kp MINUS                &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                                                   &kp EXCLAMATION   &kp DOUBLE_QUOTES  &kp LS(NUMBER_8)       &kp LS(NUMBER_9)      &kp LS(NUMBER_6)
+&kp SLASH                &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)   &kp AT_SIGN            &kp LEFT_BRACKET      &kp EQUAL
+&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp LS(MINUS)                &kp COLON       &kp LS(NUMBER_5)  &kp AMPERSAND      &kp LS(DOUBLE_QUOTES)  &kp LS(LEFT_BRACKET)  &kp INT_YEN
+&trans                   &trans        &trans        &trans        &trans        &trans                       &trans          &trans                                                                            &kp LS(INT_YEN)
             >;
         };
-
     };
 };
