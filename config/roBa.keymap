@@ -9,8 +9,20 @@
 };
 
 &trackball {
-    automouse-layer = <4>; // MOUSE
-    scroll-layers = <5>;   // SCROLL
+    automouse-layer = <4>;
+    scroll-layers = <5>;
+
+    // arrows {
+    //     layers = <3>;
+    //     bindings =
+    //         <&kp RIGHT_ARROW>,
+    //         <&kp LEFT_ARROW>,
+    //         <&kp UP_ARROW>,
+    //         <&kp DOWN_ARROW>;
+    //     tick = <10>;
+    //     wait-ms = <5>;
+    //     tap-ms = <5>;
+    // };
 };
 
 / {
@@ -56,18 +68,6 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
-
-        to_us: to_us {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 7>;     // US_Symbols
-        };
-
-        to_jp: to_jp {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 8>;     // JP_Symbols
-        };
     };
 
     behaviors {
@@ -84,14 +84,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // 0: 共通ベース
-
-        Common {
+        default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R        &kp T                                     &kp Y        &kp U  &trans     &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F        &kp G   &kp LS(LG(S))      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &trans
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B   &trans             &trans         &kp N        &kp M  &kp COMMA  &kp DOT  &lt 6 SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 SPACE  &trans  &trans             &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q             &kp W         &kp E         &kp R                   &kp T                                                                     &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                   &kp G                   &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &lt_to_layer_0 4 LS(N7)
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B                   &kp SQT                            &kp SEMI       &kp N        &kp M  &kp COMMA  &kp DOT  &lt_to_layer_0 6 SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 4 SPACE  &lt_to_layer_0 7 SPACE  &lt_to_layer_0 3 LA(LS(LBKT))      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PG_UP>;
@@ -101,14 +99,14 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &kp F11
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp A   &trans  &trans  &trans  &kp F11
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &kp F12
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
 
-        US_NUM {
+        NUM {
             bindings = <
 &kp MINUS                &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                                                   &kp EXCLAMATION  &kp AT_SIGN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND
 &kp SLASH                &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp HASH         &kp DOLLAR   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE
@@ -135,55 +133,35 @@
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans     &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3   &mkp MB2   &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &mkp LCLK  &mkp MCLK  &mkp RCLK
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                  &trans
+&trans  &trans  &trans  &to 0   &to 0   &to 0       &to 0   &to 0                                   &trans
             >;
         };
 
         SCROLL {
             bindings = <
-&kp A   &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
-        BT_profile {
+        layer_6 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &to_us        &to_jp        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
         };
 
-        US_Symbols {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                                           &trans  &trans  &mo 5   &trans  &trans
-&trans  &trans  &trans  &trans  &trans       &trans               &trans         &trans  &trans  &trans  &trans  &kp APOSTROPHE
-&trans  &trans  &trans  &trans  &trans       &kp COLON            &kp SEMICOLON  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &lt 2 SPACE  &lt 3 LA(GRAVE)      &trans         &trans                          &trans
-            >;
-        };
-
-        JP_Symbols {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &lt 5 I  &trans  &trans
-&trans  &trans  &trans  &trans  &trans       &trans               &trans    &trans  &trans  &trans   &trans  &kp LS(N7)
-&trans  &trans  &trans  &trans  &trans       &kp SQT              &kp SEMI  &trans  &trans  &trans   &trans  &trans
-&trans  &trans  &trans  &trans  &lt 9 SPACE  &lt 3 LA(GRAVE)      &trans    &trans                           &trans
-            >;
-        };
-
-        JP_NUM {
+        JP_Symbol {
             bindings = <
 &kp MINUS     &kp N7  &kp N8  &kp N9  &kp LS(SEMI)                                       &kp LS(N1)  &kp LBKT    &kp LS(N8)    &kp LS(N9)    &kp LS(N6)
 &kp SLASH     &kp N4  &kp N5  &kp N6  &kp LS(SQT)   &kp LC(LA(KP_N0))      &kp LS(INT1)  &kp LS(N3)  &kp LS(N4)  &kp RBKT      &kp NUHS      &kp LS(EQUAL)
 &mt LSHFT N0  &kp N1  &kp N2  &kp N3  &kp DOT       &kp LS(MINUS)          &kp LS(SQT)   &kp LS(N5)  &kp EQUAL   &kp LS(RBKT)  &kp LS(NUHS)  &kp INT1
 &trans        &trans  &trans  &trans  &trans        &trans                 &trans        &trans                                              &kp LS(INT3)
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
     };
 };
