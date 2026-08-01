@@ -54,13 +54,13 @@
         to_us: to_us {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 8>;
+            bindings = <&to 6>;     // US_Symbols
         };
 
         to_jp: to_jp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 9>;
+            bindings = <&to 7>;     // JP_Symbols
         };
     };
 
@@ -140,7 +140,27 @@
             >;
         };
 
-        // 6: 英語用NUM
+        // 6: 英語環境
+        US_Symbols {
+            bindings = <
+&trans &trans &trans &trans &trans &trans &trans &lt 4 I &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp APOSTROPHE
+&trans &trans &trans &trans &trans &kp COLON &kp SEMICOLON &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &lt 8 SPACE &lt 2 LA(GRAVE) &trans &trans &trans
+            >;
+        };
+
+        // 7: 日本語環境
+        JP_Symbols {
+            bindings = <
+&trans &trans &trans &trans &trans &trans &trans &lt 4 I &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp LS(N7)
+&trans &trans &trans &trans &trans &kp SQT &kp SEMI &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &lt 9 SPACE &lt 2 LA(GRAVE) &trans &trans &trans
+            >;
+        };
+
+        // 8: 英語用NUM
         US_NUM {
             bindings = <
 &kp MINUS &kp NUMBER_7 &kp NUMBER_8 &kp N9 &kp PLUS &kp EXCLAMATION &kp AT_SIGN &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp AMPERSAND
@@ -151,7 +171,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-        // 7: 日本語用NUM
+        // 9: 日本語用NUM
         JP_NUM {
             bindings = <
 &kp MINUS &kp N7 &kp N8 &kp N9 &kp LS(SEMI) &kp LS(N1) &kp LBKT &kp LS(N8) &kp LS(N9) &kp LS(N6)
@@ -160,26 +180,6 @@
 &trans &trans &trans &trans &trans &trans &trans &trans &kp LS(INT3)
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
-        };
-
-        // 8: 英語環境
-        US_Symbols {
-            bindings = <
-&trans &trans &trans &trans &trans &trans &trans &lt 4 I &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp APOSTROPHE
-&trans &trans &trans &trans &trans &kp COLON &kp SEMICOLON &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &lt 6 SPACE &kp LA(GRAVE) &trans &trans &trans
-            >;
-        };
-
-        // 9: 日本語環境
-        JP_Symbols {
-            bindings = <
-&trans &trans &trans &trans &trans &trans &trans &lt 4 I &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp LS(N7)
-&trans &trans &trans &trans &trans &kp SQT &kp SEMI &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &lt 7 SPACE &kp LA(GRAVE) &trans &trans &trans
-            >;
         };
     };
 };
