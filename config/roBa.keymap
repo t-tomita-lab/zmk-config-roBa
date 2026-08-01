@@ -114,7 +114,7 @@
 &trans                   &trans        &trans        &trans        &trans        &trans                       &trans          &trans                                                                     &kp PIPE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         ARROW {
