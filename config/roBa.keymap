@@ -47,6 +47,16 @@
             key-positions = <18 19>;
             timeout-ms = <0>;
         };
+
+        jp {
+            bindings = <&to_jp>;
+            key-positions = <39 38>;
+        };
+
+        us {
+            bindings = <&to 0>;
+            key-positions = <41 40>;
+        };
     };
 
     macros {
