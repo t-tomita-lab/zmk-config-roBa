@@ -154,5 +154,14 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
         };
+
+        JP_Synbol {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
     };
 };
