@@ -143,7 +143,8 @@
         // 6: 英語環境
         US_Symbols {
             bindings = <
-&trans &trans &trans &trans &trans &trans &trans &lt 4 I &trans &trans
+// &trans &trans &trans &trans &trans &trans &trans &lt 4 I &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &mo 4 &trans &trans
 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp APOSTROPHE
 &trans &trans &trans &trans &trans &kp COLON &kp SEMICOLON &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &lt 8 SPACE &lt 2 LA(GRAVE) &trans &trans &trans
@@ -153,7 +154,8 @@
         // 7: 日本語環境
         JP_Symbols {
             bindings = <
-&trans &trans &trans &trans &trans &trans &trans &lt 4 I &trans &trans
+// &trans &trans &trans &trans &trans &trans &trans &lt 4 I &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &mo 4 &trans &trans
 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp LS(N7)
 &trans &trans &trans &trans &trans &kp SQT &kp SEMI &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &lt 9 SPACE &lt 2 LA(GRAVE) &trans &trans &trans
