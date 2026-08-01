@@ -160,10 +160,10 @@
 
         US_Symbols {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                           &trans  &trans  &lt 4 I  &trans  &trans
-&trans  &trans  &trans  &trans  &trans       &trans               &trans         &trans  &trans  &trans   &trans  &kp APOSTROPHE
-&trans  &trans  &trans  &trans  &trans       &kp COLON            &kp SEMICOLON  &trans  &trans  &trans   &trans  &trans
-&trans  &trans  &trans  &trans  &lt 8 SPACE  &lt 2 LA(GRAVE)      &trans         &trans                           &trans
+&trans  &trans  &trans  &trans  &trans                                           &trans  &trans  &to 4   &trans  &trans
+&trans  &trans  &trans  &trans  &trans       &trans               &trans         &trans  &trans  &trans  &trans  &kp APOSTROPHE
+&trans  &trans  &trans  &trans  &trans       &kp COLON            &kp SEMICOLON  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &lt 8 SPACE  &lt 2 LA(GRAVE)      &trans         &trans                          &trans
             >;
         };
 
