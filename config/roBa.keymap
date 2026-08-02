@@ -57,11 +57,6 @@
             bindings = <&to 0>;
             key-positions = <41 40>;
         };
-
-        jp2 {
-            bindings = <&to 2>;
-            key-positions = <37 38>;
-        };
     };
 
     macros {
@@ -98,7 +93,7 @@
         Default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R        &kp T                                            &kp Y        &kp U  &lt 5 I    &kp O    &lt 5 P
-&kp A             &kp S         &kp D         &kp F        &kp G        &kp LS(LG(S))        &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SINGLE_QUOTE
+&mt LCTRL A       &kp S         &kp D         &kp F        &kp G        &kp LS(LG(S))        &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SINGLE_QUOTE
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B        &kp COLON            &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &lt 7 SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 7 SPACE  &lt 1 SPACE  &lt 6 LA(GRAVE)      &kp BACKSPACE  &lt 8 ENTER                             &kp DEL
             >;
