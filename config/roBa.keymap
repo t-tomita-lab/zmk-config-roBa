@@ -94,7 +94,7 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R        &kp T                                          &kp Y        &kp U  &lt 5 I    &kp O    &lt 5 P
 &mt LCTRL A       &kp S         &kp D         &kp F        &kp G        &kp LS(LG(S))      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SINGLE_QUOTE
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B        &kp COLON          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &lt 7 SLASH
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B        &kp COLON          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 7 LANG1  &lt 1 SPACE  &lt 6 LANG2        &kp BACKSPACE  &lt 8 ENTER                             &kp DEL
             >;
 
@@ -163,10 +163,10 @@
 
         BT_profile {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+&bt BT_PRV  &bt BT_NXT  &trans  &trans  &trans                           &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
+&trans      &trans      &trans  &trans  &trans  &trans      &trans       &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
+&trans      &trans      &trans  &trans  &trans  &trans      &bootloader  &trans         &trans         &trans         &trans         &bt BT_CLR
+&trans      &trans      &trans  &trans  &trans  &trans      &trans       &trans                                                      &bt BT_CLR_ALL
             >;
         };
 
