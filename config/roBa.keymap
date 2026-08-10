@@ -8,9 +8,7 @@
     quick-tap-ms = <0>;
 };
 
-&trackball {
-    scroll-layers = <5>;
-};
+&trackball { scroll-layers = <5>; };
 
 / {
     combos {
@@ -91,10 +89,10 @@
 
         Default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R        &kp T                                                     &kp Y            &kp U  &lt 5 I    &kp O    &lt 5 P
-&mt LCTRL A       &kp S         &kp D         &kp F        &kp G        &kp LS(LG(S))      &kp MINUS                 &kp H            &kp J  &kp K      &kp L    &kp SINGLE_QUOTE
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B        &kp COLON          &kp SEMICOLON             &kp N            &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 7 LANG2  &lt 1 SPACE  &lt 6 LANG1        &mt LEFT_SHIFT BACKSPACE  &mt RCTRL ENTER                             &kp DEL
+&kp Q             &kp W         &kp E         &kp R        &kp T                                          &kp Y                  &kp U  &lt 5 I    &kp O    &lt 5 P
+&mt LCTRL A       &kp S         &kp D         &kp F        &kp G        &kp LS(LG(S))      &kp MINUS      &kp H                  &kp J  &kp K      &kp L    &kp SINGLE_QUOTE
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B        &kp COLON          &kp SEMICOLON  &kp N                  &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 7 LANG2  &lt 1 SPACE  &lt 6 LANG1        &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                             &mt RCTRL DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PG_UP>;
