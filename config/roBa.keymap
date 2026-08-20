@@ -3,6 +3,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+// スクロール量を調整（デフォルトは10。小さくすると1クリックあたりの量が減る）
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 6
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -80,6 +83,14 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        encoder_scroll: encoder_scroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            tap-ms = <15>;
+        };
+
     };
 
     keymap {
@@ -93,7 +104,7 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B        &kp COLON          &kp SEMICOLON  &kp N      &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 7 LANG2  &lt 1 SPACE  &lt 6 LANG1        &kp BACKSPACE  &kp ENTER                             &mt RCTRL DEL
             >;
-            sensor-bindings = <&inc_dec_kp PAGE_DOWN PG_UP>;
+            sensor-bindings = <&encoder_scroll>;
         };
 
         // 1: 英語用NUM
@@ -156,7 +167,6 @@
 &trans      &kp LC(LS(TAB))  &kp LC(TAB)     &kp LS(TAB)      &trans    &kp LG(TAB)      &kp RG(TAB)  &trans          &trans          &trans        &trans           &trans
 &trans      &trans           &trans          &trans           &trans    &trans           &trans       &trans                                                         &trans
             >;
-            sensor-bindings = <&inc_dec_kp LC(PAGE_DOWN) LC(PAGE_UP)>;
         };
 
         FUNK_BT {
