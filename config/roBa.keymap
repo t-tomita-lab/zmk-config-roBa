@@ -96,7 +96,7 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B        &kp COLON          &kp SEMICOLON  &kp N      &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 7 LANG2  &lt 1 SPACE  &lt 6 LANG1        &kp BACKSPACE  &kp ENTER                             &mt RCTRL DEL
             >;
-            sensor-bindings = <&inc_dec_kp LC(UP) LC(DOWN)>;
+            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
         // 1: 英語用NUM
