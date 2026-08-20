@@ -106,7 +106,7 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B        &kp COLON          &kp SEMICOLON  &kp N      &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 7 LANG2  &lt 1 SPACE  &lt 6 LANG1        &kp BACKSPACE  &kp ENTER                             &mt RCTRL DEL
             >;
-            sensor-bindings = <&encoder_scroll SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&encoder_scroll MOVE_Y(8) MOVE_Y(-8)>;
         };
 
         // 1: 英語用NUM
