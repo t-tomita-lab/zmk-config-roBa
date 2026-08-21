@@ -21,7 +21,7 @@
 
         shift_tab {
             bindings = <&kp LS(TAB)>;
-            key-positions = <2 3>;
+            key-positions = <1 2>;
         };
 
         muhennkann {
