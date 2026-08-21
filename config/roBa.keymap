@@ -52,7 +52,7 @@
 
         us {
             bindings = <&to 0>;
-            key-positions = <41 40>;
+            key-positions = <37 38>;
         };
     };
 
