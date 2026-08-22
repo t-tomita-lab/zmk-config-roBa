@@ -86,7 +86,6 @@
         compatible = "zmk,keymap";
 
         // 0: 共通ベース
-
         Default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R        &kp T                                          &kp Y      &kp U  &lt 5 I    &kp O    &kp P
@@ -99,20 +98,17 @@
         };
 
         // 1: 英語用NUM
-
         US_NUM {
             bindings = <
-&kp MINUS                &kp NUMBER_7   &kp NUMBER_8      &kp N9        &kp PLUS                                      &kp EXCLAMATION  &kp AT_SIGN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND
-&kp SLASH                &kp NUMBER_4   &kp NUMBER_5      &kp NUMBER_6  &kp ASTERISK  &kp C_MUTE      &kp UNDERSCORE  &kp HASH         &kp DOLLAR   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES
-&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1   &kp NUMBER_2      &kp NUMBER_3  &kp PERIOD    &kp EQUAL       &kp TILDE       &kp PERCENT      &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp QMARK
-&trans                   &kp LESS_THAN  &kp GREATER_THAN  &trans        &trans        &trans          &kp BACKSLASH   &trans                                                                     &kp PIPE
+&kp MINUS                &kp NUMBER_7   &kp NUMBER_8      &kp N9        &kp PLUS                                                   &kp EXCLAMATION  &kp AT_SIGN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND
+&kp SLASH                &kp NUMBER_4   &kp NUMBER_5      &kp NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp HASH         &kp DOLLAR   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES
+&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1   &kp NUMBER_2      &kp NUMBER_3  &kp PERIOD    &kp EQUAL                    &kp TILDE       &kp PERCENT      &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp QMARK
+&trans                   &kp LESS_THAN  &kp GREATER_THAN  &trans        &trans        &trans                       &kp BACKSLASH   &kp GRAVE                                                  &kp PIPE
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         // 2: 日本語環境用記号上書き
-
         JP_Symbols {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &lt 5 I  &trans  &trans
@@ -123,20 +119,17 @@
         };
 
         // 3: 日本語用NUM
-
         JP_NUM {
             bindings = <
-&kp MINUS     &kp N7         &kp N8          &kp N9  &kp LS(SEMI)                                    &kp LS(N1)  &kp LBKT    &kp LS(N8)    &kp LS(N9)    &kp LS(N6)
-&kp SLASH     &kp N4         &kp N5          &kp N6  &kp LS(SQT)   &kp C_MUTE         &kp LS(INT1)   &kp LS(N3)  &kp LS(N4)  &kp RBKT      &kp NUHS      &kp LS(N2)
-&mt LSHFT N0  &kp N1         &kp N2          &kp N3  &kp DOT       &kp LS(MINUS)      &kp LS(EQUAL)  &kp LS(N5)  &kp EQUAL   &kp LS(RBKT)  &kp LS(NUHS)  &kp LS(SLASH)
-&trans        &kp RS(COMMA)  &kp RS(PERIOD)  &trans  &trans        &trans             &kp INT1       &trans                                              &kp LS(INT3)
+&kp MINUS     &kp N7         &kp N8          &kp N9  &kp LS(SEMI)                                       &kp LS(N1)  &kp LBKT    &kp LS(N8)    &kp LS(N9)    &kp LS(N6)
+&kp SLASH     &kp N4         &kp N5          &kp N6  &kp LS(SQT)   &kp LC(LA(KP_N0))      &kp LS(INT1)  &kp LS(N3)  &kp LS(N4)  &kp RBKT      &kp NUHS      &kp LS(N2)
+&mt LSHFT N0  &kp N1         &kp N2          &kp N3  &kp DOT       &kp LS(MINUS)          &kp LS(EQUAL) &kp LS(N5)  &kp EQUAL   &kp LS(RBKT)  &kp LS(NUHS)  &kp LS(SLASH)
+&trans        &kp RS(COMMA)  &kp RS(PERIOD)  &trans  &trans        &trans                 &kp INT1      &kp LS(LBKT)                                         &kp LS(INT3)
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         // 4: MOUSE
-
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
@@ -147,7 +140,6 @@
         };
 
         // 5: SCROLL
-
         SCROLL {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
@@ -158,7 +150,6 @@
         };
 
         // 6: ARROW
-
         ARROW {
             bindings = <
 &kp ESCAPE  &kp PAGE_DOWN    &kp UP_ARROW    &kp PAGE_UP      &kp HOME                                &trans          &trans          &trans        &trans           &trans
