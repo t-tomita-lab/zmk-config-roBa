@@ -101,18 +101,16 @@
         };
 
         // 2: 日本語環境用記号上書き
-
         JP_Symbols {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &lt 5 I  &trans  &trans
 &trans  &trans  &trans  &trans  &trans       &trans       &trans    &trans  &trans  &trans   &trans  &kp LS(N7)
 &trans  &trans  &trans  &trans  &trans       &kp SQT      &kp SEMI  &trans  &trans  &trans   &trans  &trans
-&trans  &trans  &trans  &trans  &lt 3 SPACE  &trans       &trans    &trans                           &trans
+&trans  &trans  &trans  &trans  &lt 3 SPACE  &trans       &trans    &trans                           &kp INT1
             >;
         };
 
         // 3: 日本語用NUM
-
         JP_NUM {
             bindings = <
 &kp MINUS     &kp N7         &kp N8          &kp N9  &kp LS(SEMI)                                        &kp LS(N1)    &kp LBKT    &kp LS(N8)    &kp LS(N9)    &kp LS(N6)
